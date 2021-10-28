@@ -1,38 +1,40 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.homeBackground{
+  background: url('https://www.orcid.co.uk/wp-content/uploads/bfi_thumb/orcid-01-o53p15k1daqhplhwq5bnw13rgl8nwk3i1aa125gqgo.png') center center/cover no-repeat;
+  height: 85vh;
+  width: 100%; 
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: column; 
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+  object-fit: contain;  
+}
+.homeLoginPanel > h1 {
+  color:white;
+  font-size: 30px;
+  
+}
+.homeLoginPanel > p {
+  color:white;
+  font-size: 12px;
+  font-family: sans-serif;
+  margin-bottom: 0px;
+
+}
+.ui.button.homeButton {
+  height: 6vh;
+  width: 85%;
+  margin-top: 0.5em; 
 }
 
-.App-link {
-  color: #61dafb;
+.ui.divider.aaa{
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
+
+
+
