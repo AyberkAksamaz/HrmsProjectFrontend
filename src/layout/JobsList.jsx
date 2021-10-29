@@ -1,22 +1,24 @@
 import React, { useState, useEffect } from 'react'
-import { Card } from 'semantic-ui-react'
+import { Link } from 'react-router-dom';
+import { Card, Container } from 'semantic-ui-react'
 import JobsService from '../Services/jobsService'
 
 export default function JobsList() {
 
     const [jobs, setJobs] = useState([])
 
-    useEffect(() =>{
+    useEffect(() => {
         let jobsService = new JobsService()
         jobsService.getJobs().then(result => setJobs(result.data.data))
     }, []);
 
     return (
-        <div>
+        <div style={{ marginTop: '0.5em' }}>
+
             <Card.Group>
                 {
-                     jobs.map((job) => (
-                        <Card>
+                    jobs.map((job) => (
+                        <Card href={`/jobs/${job.jobPosition?.id}`}>
                             <Card.Content>
                                 <Card.Header>{job.jobDescription}</Card.Header>
                                 <Card.Meta>{job.city?.cityName}</Card.Meta>
@@ -25,9 +27,10 @@ export default function JobsList() {
                                 </Card.Description>
                             </Card.Content>
                         </Card>
-                     ))
+                    ))
                 }
             </Card.Group>
+
         </div>
     )
 }

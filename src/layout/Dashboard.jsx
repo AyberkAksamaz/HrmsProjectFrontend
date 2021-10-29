@@ -1,7 +1,9 @@
 import React from 'react'
-import { Container } from 'semantic-ui-react'
+import { Route } from 'react-router'
 import HomePage from '../pages/HomePage'
-import HomeLoginPanel from './HomeLoginPanel'
+import JobsDetailPage from '../pages/JobsDetailPage'
+import JobsListPage from '../pages/JobsListPage'
+import HomeNavi from './HomeNavi'
 
 
 
@@ -9,7 +11,11 @@ import HomeLoginPanel from './HomeLoginPanel'
 export default function Dashboard() {
     return (
         <div>
-            <HomePage/>
+            <HomeNavi/>
+            <Route exact path="/" component={HomePage} />
+            <Route exact path="/home" component={HomePage} />
+            <Route exact path="/jobs/" component={JobsListPage} />
+            <Route exact path="/jobs/:id" component={JobsDetailPage} />
         </div>
     )
 }

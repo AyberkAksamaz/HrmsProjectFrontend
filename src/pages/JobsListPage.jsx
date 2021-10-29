@@ -1,7 +1,7 @@
 import React from 'react'
 import JobsList from '../layout/JobsList'
 
-export default function jobsListPage() {
+export default function JobsListPage() {
     return (
         <div>
             <JobsList/>
