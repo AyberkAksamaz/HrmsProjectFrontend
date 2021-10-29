@@ -5,7 +5,7 @@ import HomeLoginPanel from './HomeLoginPanel'
 export default function HomeLogin() {
     return (
         <div className='homeBackground'>
-            <HomeLoginPanel/>
+            <HomeLoginPanel/>  
         </div>
     )
 }
