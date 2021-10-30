@@ -6,4 +6,9 @@ export default class JobsService {
     getByPositionId(id){
         return  axios.get('http://localhost:8080/api/JobsAdvertisement/getByPositionID?id='+id)
     }
+    addJob(values){
+        console.log("asdas:" + values.cityName)
+        return axios.post('http://localhost:8080/api/JobsAdvertisement/add'+values)
+        
+    }
 }
